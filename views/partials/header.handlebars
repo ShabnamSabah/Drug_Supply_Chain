@@ -1,0 +1,23 @@
+<header>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <a class="navbar-brand"
+      href="https://w7.pngwing.com/pngs/593/364/png-transparent-supply-chain-management-company-logo-organization-supply-chain-company-text-people-thumbnail.png">
+      <img
+        src="https://w7.pngwing.com/pngs/593/364/png-transparent-supply-chain-management-company-logo-organization-supply-chain-company-text-people-thumbnail.png"
+        alt="logo" style="width:50px;"> Supply Chain Management
+    </a>
+    <ul class="navbar-nav ml-auto">
+      
+      {{#if email}}
+
+      <li class="nav-item"><a class="nav-link" href="#">{{name}} ({{role}})</a></li>
+      <li class="nav-item"><a class="nav-link" href="/auth/logout">Logout</a></li>
+      {{else}}
+      <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+     <li class="nav-item"><a class="nav-link" href="/auth/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link" href="/auth/register">Register</a></li>
+      {{/if}}
+    </ul>
+
+  </nav>
+</header>

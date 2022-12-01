@@ -1,0 +1,22 @@
+{{>header}}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="m_home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Medicine</li>
+  </ol>
+</nav>
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i> Add Product</h1>
+           {{> messages}}
+            
+            <form action="/manufacturer/add" method="POST">
+               {{> product_form}}
+
+               
+            </form>
+        </div>
+    </div>
+</div>
+

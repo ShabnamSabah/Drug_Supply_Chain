@@ -1,0 +1,23 @@
+{{>header}}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/patient/r_home">Home</a></li>
+         <li class="breadcrumb-item"><a href="/patient/view">Medicine List</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Order Medicine</li>
+    </ol>
+</nav>
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i> Order Product</h1>
+            {{> messages}}
+          
+            {{#each order}}
+            <form action="/patient/order/{{id}}" method="POST">
+
+                {{> order_form}}
+            </form>
+            {{/each}}
+        </div>
+    </div>
+</div>

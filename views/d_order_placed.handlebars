@@ -1,0 +1,48 @@
+{{>header}}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/distributor/d_home">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">List Of Placed Order</li>
+    </ol>
+</nav>
+<div class="row m-5">
+    <div class="col-lg-12 col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-5"><i class="fas fa-pills"></i> Placed Order List</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                       
+                        <th scope="col">Name</th>
+                        <th scope="col">Company</th>
+                        <th scope="col" class="text-center">Details</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        
+                       
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each order}}
+                    <tr>
+                        
+                        <td>{{product_name}}</td>
+                        <td>{{product_company}}</td>
+                        <td>{{product_details}}</td>
+                        <td>{{product_price}}</td>
+                       
+                        <td>{{quantity}}</td>
+                        
+                      
+                       
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

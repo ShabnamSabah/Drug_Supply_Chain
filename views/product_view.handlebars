@@ -1,0 +1,45 @@
+{{>header}}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="m_home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Medicine List</li>
+  </ol>
+</nav>
+<div class="row m-5">
+    <div class="col-lg-12 col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3"><i class="fas fa-pills"></i> Medicine List</h1>
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                       
+                        <th scope="col">Name</th>
+                        <th scope="col" class="text-center">Company</th>
+                        <th scope="col" class="text-center">Details</th>
+                        <th scope="col">Price</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each product}}
+                    <tr>
+                        
+                        <td>{{product_name}}</td>
+                        <td>{{product_company}}</td>
+                        <td>{{product_details}}</td>
+                        <td>{{product_price}}</td>
+                        <td class="text-end" style='white-space: nowrap'>
+                        <a href="/manufacturer/editproduct/{{id}}" type="button" class="btn btn-info btn-small"><i class="fas fa-pencil-alt"></i> Edit</a>
+                        <a href="/manufacturer/delete/{{id}}" type="button" class="btn btn-primary btn-small"><i class="fas fa-user-times"></i> Delete</a>
+                        </td>
+
+                    </tr>
+                    {{/each}}
+                 
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

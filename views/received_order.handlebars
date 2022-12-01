@@ -1,0 +1,60 @@
+{{>header}}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/manufacturer/m_home">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">List Of Received Order</li>
+    </ol>
+</nav>
+<div class="row m-auto">
+    <div class="col-lg-12 col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-5"><i class="fas fa-pills"></i> Received Order List</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th scope="col">Name</th>
+
+                        <th scope="col">Details</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+
+                        <th scope="col">Username</th>
+                        <th scope="col" class="text-center">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Address</th>
+                        <th scope="col" class="text-center">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each order}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{product_name}}</td>
+                        <td>{{product_details}}</td>
+                        <td>{{product_price}}</td>
+                        <td>{{quantity}}</td>
+                        <td>{{name}}</td>
+                        <td>{{email}}</td>
+                        <td>{{phone_number}}</td>
+                        <td>{{address}}</td>
+                        <td class="text-end" style='white-space: nowrap'>
+
+                            <a href="/manufacturer/order_confirm/{{id}}" type="button" class="btn btn-success btn-small"><i class="fas fa-check"></i>
+                                Confirm </a>
+                            <a href="/manufacturer/order_reject/{{id}}" type="button" class="btn btn-danger btn-small"><i class="fas fa-times"></i>
+                                Reject </a>
+
+                        </td>
+
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

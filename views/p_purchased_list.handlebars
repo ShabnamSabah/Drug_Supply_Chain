@@ -1,0 +1,30 @@
+{{>header}}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/patient/p_home">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">List of Medicines</li>
+    </ol>
+</nav>
+
+<div class="row m-5">
+    <div class="col-lg-12 col-md-6 m-auto">
+        <h1 class="text-center mb-3"><i class="fas fa-pills"></i> Medicine List</h1>
+
+    </div>
+</div>
+
+<div class="row mt-5">
+    {{#each order}}
+    <div class="col-sm-6 col-md-4">
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{product_name}}</h5>
+                <p class="card-text">{{product_company}}</p>
+                <p class="card-text">{{product_details}}</p>
+                <p class="card-text"> Price: {{product_price}}Tk.</p>
+                <a href="#" class="btn btn-primary pull-right">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+ {{/each}}
+</div>

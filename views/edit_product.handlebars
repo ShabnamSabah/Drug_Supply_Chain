@@ -1,0 +1,34 @@
+{{>header}}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/manufacturer/m_home">Home</a></li>
+    <li class="breadcrumb-item"><a href="/manufacturer/view">Medicine List</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Medicine</li>
+  </ol>
+</nav>
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3"><i class="fas fa-pencil-alt"></i> Edit Medicine</h1>
+            {{#if alert}}
+            <div class="alert">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{alert}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            {{/if}}
+            {{#each product}}
+            <form action="/manufacturer/editproduct/{{id}}" method="POST">
+            {{> product_form}}
+           
+               
+            </form>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
